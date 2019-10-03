@@ -1,0 +1,96 @@
+Nama: Uray Wahyu Saputra
+NIM : D1041131036
+
+1. Modifier
+   a.	private EditText mMessageEditText;
+   b.	public static final int TEXT_REQUEST = 1;
+   c.	private int mCount = 36;
+
+2. Method
+   a.	public void showToast(View view) {
+        	Toast toast = Toast.makeText(this, 			R.string.toast_message, Toast.LENGTH_SHORT);
+        	toast.show();
+        	mCount= 0;
+        	if (mShowCount != null)
+            		mShowCount.setText(Integer.toString(mCount));
+    	}
+   b.	public void returnReply(View view) {
+        	String reply = mReply.getText().toString();
+        	Intent replyIntent = new Intent();
+        	replyIntent.putExtra(EXTRA_REPLY, reply);
+        	setResult(RESULT_OK,replyIntent);
+        	finish();
+    	}
+
+   c.	public void countUp(View view) {
+        	mCount++;
+        	if (mShowCount != null)
+            		mShowCount.setText(Integer.toString(mCount));
+    	}
+   d.	public void countDown(View view) {
+        	mCount--;
+        	if (mShowCount != null)
+            		mShowCount.setText(Integer.toString(mCount));
+    	}
+
+3. Class
+   a.	public class MainActivity extends AppCompatActivity {
+	}
+   b.	public class SecondActivity extends AppCompatActivity {
+	}
+
+4. Function
+   a.	public void showToast(View view) {
+        	Toast toast = Toast.makeText(this, 						R.string.toast_message, Toast.LENGTH_SHORT);
+        	toast.show();
+        	mCount= 0;
+        	if (mShowCount != null)
+            		mShowCount.setText(Integer.toString(mCount));
+    	}
+   b.	public void countUp(View view) {
+        	mCount++;
+        	if (mShowCount != null)
+            		mShowCount.setText(Integer.toString(mCount));
+    	}
+   c.	public void countDown(View view) {
+        	mCount--;
+        	if (mShowCount != null)
+            		mShowCount.setText(Integer.toString(mCount));
+    	}
+
+5. Constructor
+   a.	public class Execution{
+		public Execution(){
+			System.out.println("Eksekusi method constructor");
+		}
+	
+	}
+   b.	public class User{
+		public User(String username, String password){
+			this.username= username;
+			this.password= password;
+		}
+	}
+
+6. Polimorfisme
+   a.	Intent intent = new Intent(this, SecondActivity.class);
+   b.	Intent intent = getIntent();
+   c.	public class Polimorphism {
+   		public static void main(String[ ] args) {
+      			cetakObyek(new Balok());
+      			cetakObyek(new PersegiPanjang());
+      			cetakObyek(new BangunDatar());
+      			cetakObyek(new Object());
+   		}
+   		public static void cetakObyek(Object obyek) {
+      			System.out.println(obyek);
+   		}
+	}
+
+7. Inheritance
+   a.	public class MainActivity extends AppCompatActivity {
+	}
+   b.	public class SecondActivity extends AppCompatActivity {
+	}
+   c.	public class ThirdActivity extends AppCompatActivity {
+	}
